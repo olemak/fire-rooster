@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ProductList from './components/ProductList'
 import './App.css';
+
+const tempProducts = 
+[
+	{	id:1,
+		displayName:"Produkt 1", 
+		description: "description 1", 
+		imageUrls:
+			[
+				"url1",
+				"url2"
+			],
+		price: 123
+	}
+]
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>Fire Rooster</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ProductList products={tempProducts}/>
       </div>
     );
   }
